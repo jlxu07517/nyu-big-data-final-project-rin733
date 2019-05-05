@@ -1,0 +1,14 @@
+recSys test
+
+Params:
+    rank_list = [90, 110, 120, 130, 140, 150]
+    regParam_list = [0.1, 0.05, 0.01]
+    alpha_list = [0.5, 1, 2]
+
+Training on train_sub:
+    Higher rank, higher alpha (2), higher regParam (0.1) --> higher MAP
+
+Next step:
+1) try higher alpha: e.g. 3, 4, ...
+2) try higher regParam: e.g., 0.5, 1, ...
+3) try log2 without turning into integer
