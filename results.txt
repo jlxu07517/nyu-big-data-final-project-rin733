@@ -12,3 +12,8 @@ Next step:
 1) try higher alpha: e.g. 3, 4, ...
 2) try higher regParam: e.g., 0.5, 1, ...
 3) try log2 without turning into integer
+
+Results:
+1) For the training data, after comparing the validation results of three approaches of handling the count data: convert all count where count <=1 to 0; take log2 and turn into integer; take log2 without turning into integer, we found that the first approach(drop one) has greatly improved MAP on validation set.
+
+2)For hyperparameter tuning: currently the best results comes from rank = 150, regParam = 0.3, alpha = 4 with dropone method with MAP = 0.040840226926259666 but the performance has not plateaued. We may continue to raise these parameters.
