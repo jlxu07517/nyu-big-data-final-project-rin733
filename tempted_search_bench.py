@@ -63,7 +63,7 @@ class nmslib_search:
         if query_params is None:
             query_params = {'ef': 90}
 
-        allnb = index.knnQueryBatch(userfactor,query_params,k=topk,num_threads = 4)
+        allnb = index.knnQueryBatch(userfactor,k=topk,num_threads = 4)
         #allitems = [each[0] for each in allnb]
         #allnb is a list of length len(userfactor)
         #allnb[i] is (itemindexes,distances in increasing order)
@@ -93,19 +93,19 @@ def main(spark, data_file, model_file):
     data.createOrReplaceTempView('val')
     val_users = data.select("user_num_id").distinct()
     #labels
-    truth  = spark.sql('SELECT user_num_id AS user_id, collect_list(track_num_id) AS label FROM val GROUP BY user_num_id').repartition(1000, "user_id")
+    #truth  = spark.sql('SELECT user_num_id AS user_id, collect_list(track_num_id) AS label FROM val GROUP BY user_num_id').repartition(1000, "user_id")
     start = time.time()
     userSubsetRecs = model.recommendForUserSubset(val_users, 500)
     exact_qtime =  time.time() - start
     #exact recs
-    recs = userSubsetRecs.selectExpr("recommendations.track_num_id as exact_rec","user_num_id")
-    allres = truth.join(recs, truth.user_id == recs.user_num_id, how='left') #excact recommend track and label, user_id and user_num_id
+    #recs = userSubsetRecs.selectExpr("recommendations.track_num_id as exact_rec","user_num_id")
+    #allres = truth.join(recs, truth.user_id == recs.user_num_id, how='left') #excact recommend track and label, user_id and user_num_id
  
     #bu ji
     #exactpred = allres.select('track_num_id', 'label')
 
     #prepare data from nmslib query
-    userfactor = allres.join(model.userFactors ,allres.user_id == model.userFactors.id,how = 'left').select('id','features') #keep id to check whether the same as in allres
+    userfactor = val_users.join(model.userFactors ,val_users.user_num_id == model.userFactors.id,how = 'left').select('id','features') #keep id to check whether the same as in allres
     #Get the user where we have representation in the model, hopefully it covers all users in the validation set and test set.
     queries = np.array([row.features for row in userfactor.select('features').collect()])
     queries = np.append(queries,np.zeros((queries.shape[0],1)),axis = 1)
