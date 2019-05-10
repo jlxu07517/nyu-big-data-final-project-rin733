@@ -44,8 +44,8 @@ def main(spark, train_file):
     train_drop3.repartition(1000, ["user_num_id"]).write.parquet('train_drop3.parquet')
     train_log2.repartition(1000, ["user_num_id"]).write.parquet('train_log2.parquet')
 
-    print('Finished modifying counts data and successfully saved the following files to HDFS:\n')
-    print('train_drop1.parquet\ntrain_drop2.parquet\ntrain_drop3.parquet\ntrain_log2.parquet')
+    print('\nFinished modifying counts data and successfully saved the following files to HDFS:')
+    print('train_drop1.parquet\ntrain_drop2.parquet\ntrain_drop3.parquet\ntrain_log2.parquet\n')
 
 # Only enter this block if we're in main
 if __name__ == "__main__":
