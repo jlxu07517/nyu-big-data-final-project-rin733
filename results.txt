@@ -17,3 +17,12 @@ Results:
 1) For the training data, after comparing the validation results of three approaches of handling the count data: convert all count where count <=1 to 0; take log2 and turn into integer; take log2 without turning into integer, we found that the first approach(drop one) has greatly improved MAP on validation set.
 
 2)For hyperparameter tuning: currently the best results comes from rank = 150, regParam = 0.3, alpha = 4 with dropone method with MAP = 0.040840226926259666 but the performance has not plateaued. We may continue to raise these parameters.
+
+
+Drop2 vs Drop1
+Drop1 is better, after trying different param configurations for both.
+- Drop1: Try rank 40~80(+), regParam 0.1, alpha 5~20(+); rank 40~80(+), regParam 0.1, alpha 25~40(*30); rank 40~80(+), regParam 0.3~1, alpha 25; rank 50, regParam 1~2(+), alpha 15~30(*30); the best MAP is 0.043+ (80/1/25)
+- Drop2: Try rank 20~60(+), regParam 1~5, alpha 3~20;  the best MAP is 0.021+
+
+- Next, for drop1: try higher rank(>80), higher regParam(>2), alpha around 30
+- Next, for drop2: try higher rank(>60), regParam 2~3, alpha 5~10
