@@ -42,9 +42,11 @@ def main(spark, train_file, val_file, model_file):
     val_users = val.select('user_num_id').distinct().cache()
     truth = spark.sql('SELECT user_num_id AS user_id, collect_list(track_num_id) AS label FROM val GROUP BY user_num_id').repartition(1000, "user_id").cache()
 
-    rank_list = np.random.randint(10,100,3)
-    regParam_list = np.log(np.random.rand(3)*3+1)
-    alpha_list = 2*np.random.rand(3)
+    # 10 sets of randomly initialized params
+    rank_list = np.random.randint(10,100,10)            # rank: 10~100
+    regParam_list = np.log(np.random.rand(10)*3+1)      # regParam: 0~log4
+    alpha_list = 2*np.random.rand(10)                   # alpha: 0~2
+    params = zip(rank_list, regParam_list, alpha_list)
     metric_list = []
     best_model = None
     best_metric = 0
@@ -54,7 +56,7 @@ def main(spark, train_file, val_file, model_file):
 
     start = time.time()
 
-    for rank, regParam, alpha in itertools.product(rank_list, regParam_list, alpha_list):
+    for rank, regParam, alpha in params:
         als = ALS(rank=rank, regParam=regParam, alpha=alpha, maxIter=10, userCol="user_num_id", itemCol="track_num_id",
             ratingCol="count", implicitPrefs=True, coldStartStrategy="drop")
         model = als.fit(train)
