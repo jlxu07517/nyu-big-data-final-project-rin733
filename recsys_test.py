@@ -37,7 +37,7 @@ def main(spark, model_file, data_file):
     ###
 
     # Loads test data
-    data = spark.read.parquet(data_file)
+    data = spark.read.parquet(data_file).repartition(5000, "user_num_id")
     data.createOrReplaceTempView('data')
 
     # Loads trained ALS model
