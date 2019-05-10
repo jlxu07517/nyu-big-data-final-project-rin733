@@ -1,0 +1,46 @@
+--------Start Computing rank = 2... ...--------
+Mean Average Precision of rank 2,regParam0.2,alpha2  = 0.021008751269174845
+--------Finish Comparing rank = 2... ...--------
+--------Start Computing rank = 2... ...--------
+Mean Average Precision of rank 2,regParam0.2,alpha3  = 0.020697666543236293
+--------Finish Comparing rank = 2... ...--------
+--------Start Computing rank = 2... ...--------
+Mean Average Precision of rank 2,regParam0.01,alpha2  = 0.02081957136401365
+--------Finish Comparing rank = 2... ...--------
+--------Start Computing rank = 2... ...--------
+Mean Average Precision of rank 2,regParam0.01,alpha3  = 0.020706645006675514
+--------Finish Comparing rank = 2... ...--------
+--------Start Computing rank = 50... ...--------
+Mean Average Precision of rank 50,regParam0.2,alpha2  = 0.01951530010459321
+--------Finish Comparing rank = 50... ...--------
+--------Start Computing rank = 50... ...--------
+Mean Average Precision of rank 50,regParam0.2,alpha3  = 0.02101992056793477
+--------Finish Comparing rank = 50... ...--------
+--------Start Computing rank = 50... ...--------
+Mean Average Precision of rank 50,regParam0.01,alpha2  = 0.018645548360797938
+--------Finish Comparing rank = 50... ...--------
+--------Start Computing rank = 50... ...--------
+Mean Average Precision of rank 50,regParam0.01,alpha3  = 0.020467563200581608
+--------Finish Comparing rank = 50... ...--------
+--------Start Computing rank = 100... ...--------
+Mean Average Precision of rank 100,regParam0.2,alpha2  = 0.02044135176338404
+--------Finish Comparing rank = 100... ...--------
+--------Start Computing rank = 100... ...--------
+Mean Average Precision of rank 100,regParam0.2,alpha3  = 0.022398481526817053
+--------Finish Comparing rank = 100... ...--------
+--------Start Computing rank = 100... ...--------
+Mean Average Precision of rank 100,regParam0.01,alpha2  = 0.019469981576196897
+--------Finish Comparing rank = 100... ...--------
+--------Start Computing rank = 100... ...--------
+Mean Average Precision of rank 100,regParam0.01,alpha3  = 0.02163851452867506
+--------Finish Comparing rank = 100... ...--------
+--------Start Computing rank = 150,alpha = 4,regParam = 0.3... ...--------
+Mean Average Precision of rank 150,regParam0.3,alpha4  = 0.025322002212513947
+--------Finish Comparing rank = 150,alpha = 4,regParam = 0.3... ...--------
+--------Start Computing rank = 150,alpha = 4.5,regParam = 0.3... ...--------
+Mean Average Precision of rank 150,regParam0.3,alpha4.5  = 0.025878711005907013
+--------Finish Comparing rank = 150,alpha = 4.5,regParam = 0.3... ...--------
+--------Start Computing rank = 150,alpha = 5,regParam = 0.3... ...--------
+Mean Average Precision of rank 150,regParam0.3,alpha5  = 0.026389026014200002
+--------Finish Comparing rank = 150,alpha = 5,regParam = 0.3... ...--------
+The best model has meanAP = 0.026389026014200002 : rank = 150;regParam = 0.3;alpha = 5
