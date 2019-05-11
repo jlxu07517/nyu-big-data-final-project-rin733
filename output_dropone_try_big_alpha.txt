@@ -1,0 +1,60 @@
+[lj1194@login-2-1 final-project-rin733]$ cat o_alpha2.txt
+Try big alphas ...
+--------Start Computing rank = 40, regParam = 0.1, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.1/25 = 0.03533701744188303
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 40, regParam = 0.1, alpha = 30... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.1/30 = 0.035228368199858764
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 40, regParam = 0.1, alpha = 35... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.1/35 = 0.035110199513674
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 40, regParam = 0.1, alpha = 40... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.1/40 = 0.034915414413278605
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 60, regParam = 0.1, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 60/0.1/25 = 0.038573371804925254
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 60, regParam = 0.1, alpha = 30... ...--------
+Mean Average Precision of rank/regParam/alpha 60/0.1/30 = 0.03863058441033735
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 60, regParam = 0.1, alpha = 35... ...--------
+Mean Average Precision of rank/regParam/alpha 60/0.1/35 = 0.038590806329442645
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 60, regParam = 0.1, alpha = 40... ...--------
+Mean Average Precision of rank/regParam/alpha 60/0.1/40 = 0.03849068552832325
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 80, regParam = 0.1, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 80/0.1/25 = 0.041650234448995904
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 80, regParam = 0.1, alpha = 30... ...--------
+Mean Average Precision of rank/regParam/alpha 80/0.1/30 = 0.0416098678499207
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 80, regParam = 0.1, alpha = 35... ...--------
+Mean Average Precision of rank/regParam/alpha 80/0.1/35 = 0.04160949536759642
+--------Finish Computing--------
+
+Try big alphas ...
+--------Start Computing rank = 80, regParam = 0.1, alpha = 40... ...--------
+Mean Average Precision of rank/regParam/alpha 80/0.1/40 = 0.04151472332124757
+--------Finish Computing--------
