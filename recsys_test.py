@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 '''Part 2: recsys testing
-
 Usage:
-
     $ spark-submit recsys_test.py hdfs:/path/to/load/model.parquet hdfs:/user/lj1194/test_sub.parquet
-
 '''
 
 
@@ -16,19 +13,16 @@ import sys
 from pyspark.sql import SparkSession
 # TODO: you may need to add imports here
 # from pyspark.ml import PipelineModel
-from pyspark.ml.recommendation import ALS
+from pyspark.ml.recommendation import ALSModel
 from pyspark.mllib.evaluation import RankingMetrics
 
 
 def main(spark, model_file, data_file):
     '''Main routine for supervised evaluation
-
     Parameters
     ----------
     spark : SparkSession object
-
     model_file : string, path to store the serialized model file
-
     data_file : string, path to the parquet file to load
     '''
 
@@ -37,11 +31,11 @@ def main(spark, model_file, data_file):
     ###
 
     # Loads test data
-    data = spark.read.parquet(data_file)
+    data = spark.read.parquet(data_file).repartition(5000, ['user_num_id'])
     data.createOrReplaceTempView('data')
 
     # Loads trained ALS model
-    model = ALS.load(model_file)
+    model = ALSModel.load(model_file)
 
     # .collect()?
     users = data.select('user_num_id').distinct()
