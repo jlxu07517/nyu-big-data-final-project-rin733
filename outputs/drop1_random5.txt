@@ -1,0 +1,58 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_drop1_search3.txt
+rank_list =  [50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
+regParam_list =  [1.34609095 0.89607061 0.87999354 0.26719326 1.37631414 0.44343138
+ 0.60927495 1.49519432 0.10824792 1.26324108]
+alpha_list =  [13  5 12  7 11 10 13  8  7  8]
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 13... ...--------
+MAP = 0.027054041506896817
+
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 5... ...--------
+MAP = 0.025989625180682572
+
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 12... ...--------
+MAP = 0.02707893733447256
+
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 7... ...--------
+MAP = 0.02655960174580876
+
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 11... ...--------
+MAP = 0.02704440287823998
+
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 10... ...--------
+MAP = 0.026976941407612427
+
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 13... ...--------
+MAP = 0.027023203075682605
+
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 8... ...--------
+MAP = 0.02673174215015056
+
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 7... ...--------
+MAP = 0.026589559674012855
+
+
+--------Start Computing rank = 50, regParam = 1.3460909536811725, alpha = 8... ...--------
+MAP = 0.026745943445899818
+
+
+--------Start Computing rank = 50, regParam = 0.8960706093312631, alpha = 13... ...--------
+MAP = 0.026560081718232348
+
+
+--------Start Computing rank = 50, regParam = 0.8960706093312631, alpha = 5... ...--------
+MAP = 0.02548483333209883
+
+
+--------Start Computing rank = 50, regParam = 0.8960706093312631, alpha = 12... ...--------
+[lj1194@login-1-1 final-project-rin733]$
+
+# job interrupted without fully completing the search
