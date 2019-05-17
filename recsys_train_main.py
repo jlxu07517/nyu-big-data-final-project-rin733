@@ -5,17 +5,17 @@
 Usage:
 
     $ PYSPARK_PYTHON=$(which python) spark-submit recsys_train_9.py hdfs:/user/lj1194/train_sub.parquet hdfs:/user/lj1194/val_sub.parquet ./recsys_model_9 > output9_1.txt
+    $ PYSPARK_PYTHON=$(which python) spark-submit drop1_random4.py hdfs:/user/lj1194/train_drop1.parquet hdfs:/user/lj1194/val_sub.parquet ./recsys_drop1_random4 > o_drop1_random4.txt
 
 '''
-
 
 # We need sys to get the command line arguments
 import sys
 import itertools
+import time
 
 # And pyspark.sql to get the spark session
 from pyspark.sql import SparkSession
-from pyspark import SparkContext
 from pyspark.ml import Pipeline
 from pyspark.ml.feature import StringIndexer
 from pyspark.ml.recommendation import ALS
@@ -29,24 +29,20 @@ def main(spark, train_file, val_file, model_file):
     ----------
     spark : SparkSession object
 
-    data_file : string, path to the parquet file to load
-
-    model_file : string, path to store the serialized model file
+    train_file : string, path to the train parquet file to load
+    val_file : string, path to the val parquet file to load
+    model_file : string, path to store the best model file
     '''
 
-    ###
-    # TODO: YOUR CODE GOES HERE
-    ###
-
     train = spark.read.parquet(train_file).repartition(5000, ["user_num_id", "count"]).cache()
-    # train.createOrReplaceTempView('train')
     val = spark.read.parquet(val_file)
     val.createOrReplaceTempView('val')
     val_users = val.select('user_num_id').distinct().cache()
     truth = spark.sql('SELECT user_num_id AS user_id, collect_list(track_num_id) AS label FROM val GROUP BY user_num_id').repartition(1000, "user_id").cache()
 
-    rank_list = [90, 110, 120, 130, 140, 150]
-    regParam_list = [0.1, 0.05, 0.01]
+    # edit rank_list, regParam_list, alpha_list for tuning
+    rank_list = [10, 20, 40, 50, 60, 80, 100]
+    regParam_list = [1, 0.1, 0.01]
     alpha_list = [0.5, 1, 2]
     metric_list = []
     best_model = None
@@ -55,8 +51,9 @@ def main(spark, train_file, val_file, model_file):
     best_regParam = None
     best_alpha = None
 
+    start = time.time()
+
     for rank, regParam, alpha in itertools.product(rank_list, regParam_list, alpha_list):
-    # for rank in rank_list:
         als = ALS(rank=rank, regParam=regParam, alpha=alpha, maxIter=10, userCol="user_num_id", itemCol="track_num_id",
             ratingCol="count", implicitPrefs=True, coldStartStrategy="drop")
         model = als.fit(train)
@@ -71,8 +68,7 @@ def main(spark, train_file, val_file, model_file):
         metrics = RankingMetrics(predictionAndLabels)
         meanAP = metrics.meanAveragePrecision
         metric_list.append(meanAP)
-        print('Mean Average Precision of rank/regParam/alpha {}/{}/{} = {}'.format(rank, regParam, alpha, meanAP))
-        print('--------Finish Computing--------\n')
+        print('Mean Average Precision (MAP) = {} \n'.format(meanAP))
 
         if (meanAP > best_metric):
             best_model = model
@@ -82,6 +78,8 @@ def main(spark, train_file, val_file, model_file):
             best_alpha = alpha
 
     print("The best model has meanAP = {} : rank = {}, regParam = {}, alpha = {}".format(str(best_metric), best_rank, best_regParam, best_alpha))
+    print('Time taken per set of params: ', (time.time() - start)/len(metric_list))
+
     best_model.write().overwrite().save(model_file)
 
 
