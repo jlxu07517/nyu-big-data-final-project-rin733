@@ -26,3 +26,29 @@ Drop1 is better, after trying different param configurations for both.
 
 - Next, for drop1: try higher rank(>80), higher regParam(>2), alpha around 30
 - Next, for drop2: try higher rank(>60), regParam 2~3, alpha 5~10
+
+
+
+Below are only parts of our training results:
+
+[lj1194@login-1-1 final-project-rin733]$ ls
+000.txt                      index_train_val.py   o_maxiter1.txt      raw_max20.py
+README.md                    maxiter.py           o_maxiter_1.txt     raw_random_1.py
+alpha1.py                    maxiter1.py          o_rank50.txt        recsys_train_1.py
+alpha2.py                    maxiter60.py         o_rank50_drop2.txt  recsys_train_2.py
+bh_output_1.txt              o_alpha1.txt         o_raw_1.txt         recsys_train_3.py
+bh_recsys_train.py           o_alpha2.txt         o_raw_best.txt      recsys_train_4.py
+cf_test.csv                  o_drop1_random1.txt  o_raw_max20.txt     recsys_train_5.py
+downsample_train_set.py      o_drop1_random2.txt  o_raw_random1.txt   recsys_train_6.py
+drop1_random.py              o_drop1_random3.txt  o_raw_random2.txt   recsys_train_7.py
+drop1_random3.py             o_drop1_random4.txt  o_raw_random3.txt   recsys_train_8.py
+drop1_random4.py             o_drop1_search1.txt  o_raw_random4.txt   recsys_train_9.py
+drop1_search.py              o_drop1_search2.txt  o_reg1.txt          recsys_train_t1.py
+drop1_search2.py             o_drop1_search3.txt  out1.out            recsys_train_t2.py
+drop1_search3.py             o_drop1_test1.txt    out2.out            recsys_train_x1.py
+drop1_test.py                o_drop1_test2.txt    output8_1.txt       reg1.py
+drop2.py                     o_drop1_test3.txt    output9_1.txt       repar_3k.py
+drop2_2.py                   o_drop2.txt          rank50.py           repar_5k.py
+extension_1_modify_count.py  o_drop2_2.txt        rank50_drop2.py     test_recsys.py
+hs_err_pid157616.log         o_drop2_repar3k.txt  raw_1.py
+index_train.py               o_drop2_repar5k.txt  raw_best.py
