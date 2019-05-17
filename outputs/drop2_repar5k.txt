@@ -1,0 +1,17 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_drop2_repar5k.txt
+1557513193.6705942
+
+--------Start Computing rank = 60, regParam = 0.5, alpha = 0.6... ...--------
+Mean Average Precision of rank/regParam/alpha 60/0.5/0.6 = 0.01567665517728392
+
+
+--------Start Computing rank = 60, regParam = 0.5, alpha = 0.7... ...--------
+Mean Average Precision of rank/regParam/alpha 60/0.5/0.7 = 0.016068440516805362
+
+
+--------Start Computing rank = 60, regParam = 0.5, alpha = 0.8... ...--------
+Mean Average Precision of rank/regParam/alpha 60/0.5/0.8 = 0.016459094601315526
+
+The best model has meanAP = 0.016459094601315526 : rank = 60, regParam = 0.5, alpha = 0.8
+Time taken:  3123.547792196274
+[lj1194@login-1-1 final-project-rin733]$

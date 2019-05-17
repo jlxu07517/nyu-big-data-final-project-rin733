@@ -1,0 +1,83 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_drop2.txt
+
+--------Start Computing rank = 20, regParam = 3, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 20/3/3 = 0.016930285149481642
+
+
+--------Start Computing rank = 20, regParam = 3, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 20/3/5 = 0.018768341255543195
+
+
+--------Start Computing rank = 20, regParam = 5, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 20/5/3 = 0.015931555932727073
+
+
+--------Start Computing rank = 20, regParam = 5, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 20/5/5 = 0.017792610838353002
+
+
+--------Start Computing rank = 30, regParam = 3, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 30/3/3 = 0.017952375100626392
+
+
+--------Start Computing rank = 30, regParam = 3, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 30/3/5 = 0.019763951069781863
+
+
+--------Start Computing rank = 30, regParam = 5, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 30/5/3 = 0.01719123791549246
+
+
+--------Start Computing rank = 30, regParam = 5, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 30/5/5 = 0.019097646536434944
+
+
+--------Start Computing rank = 40, regParam = 3, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 40/3/3 = 0.018798654536602274
+
+
+--------Start Computing rank = 40, regParam = 3, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 40/3/5 = 0.020372804951856532
+
+
+--------Start Computing rank = 40, regParam = 5, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 40/5/3 = 0.018108004209296345
+
+
+--------Start Computing rank = 40, regParam = 5, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 40/5/5 = 0.02019624723948946
+
+
+--------Start Computing rank = 50, regParam = 3, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 50/3/3 = 0.019270142457956958
+
+
+--------Start Computing rank = 50, regParam = 3, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 50/3/5 = 0.020831234054362834
+
+
+--------Start Computing rank = 50, regParam = 5, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 50/5/3 = 0.01866120062531555
+
+
+--------Start Computing rank = 50, regParam = 5, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 50/5/5 = 0.020655965397031066
+
+
+--------Start Computing rank = 60, regParam = 3, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 60/3/3 = 0.01989483549633399
+
+
+--------Start Computing rank = 60, regParam = 3, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 60/3/5 = 0.02141282196781578
+
+
+--------Start Computing rank = 60, regParam = 5, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 60/5/3 = 0.019358228690492058
+
+
+--------Start Computing rank = 60, regParam = 5, alpha = 5... ...--------
+Mean Average Precision of rank/regParam/alpha 60/5/5 = 0.021379107445102883
+
+The best model has meanAP = 0.02141282196781578 : rank = 60, regParam = 3, alpha = 5
+[lj1194@login-1-1 final-project-rin733]$

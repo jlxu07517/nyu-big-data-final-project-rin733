@@ -1,0 +1,27 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_drop2_2.txt
+
+--------Start Computing rank = 60, regParam = 2.5, alpha = 6... ...--------
+Mean Average Precision of rank/regParam/alpha 60/2.5/6 = 0.021591321651811178
+
+
+--------Start Computing rank = 60, regParam = 2.5, alpha = 8... ...--------
+Mean Average Precision of rank/regParam/alpha 60/2.5/8 = 0.0218739798234052
+
+
+--------Start Computing rank = 80, regParam = 2.5, alpha = 6... ...--------
+Mean Average Precision of rank/regParam/alpha 80/2.5/6 = 0.022433372454192687
+
+
+--------Start Computing rank = 80, regParam = 2.5, alpha = 8... ...--------
+Mean Average Precision of rank/regParam/alpha 80/2.5/8 = 0.022713295666558758
+
+
+--------Start Computing rank = 100, regParam = 2.5, alpha = 6... ...--------
+Mean Average Precision of rank/regParam/alpha 100/2.5/6 = 0.02263408147872646
+
+
+--------Start Computing rank = 100, regParam = 2.5, alpha = 8... ...--------
+Mean Average Precision of rank/regParam/alpha 100/2.5/8 = 0.022754462333960442
+
+The best model has meanAP = 0.022754462333960442 : rank = 100, regParam = 2.5, alpha = 8
+[lj1194@login-1-1 final-project-rin733]$

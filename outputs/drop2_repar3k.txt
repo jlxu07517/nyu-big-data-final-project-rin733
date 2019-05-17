@@ -1,0 +1,17 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_drop2_repar3k.txt
+1557508187.0455775
+
+--------Start Computing rank = 60, regParam = 2.5, alpha = 9... ...--------
+Mean Average Precision of rank/regParam/alpha 60/2.5/9 = 0.0219522311297181
+
+
+--------Start Computing rank = 60, regParam = 2.5, alpha = 10... ...--------
+Mean Average Precision of rank/regParam/alpha 60/2.5/10 = 0.021772492226575506
+
+
+--------Start Computing rank = 60, regParam = 2.5, alpha = 11... ...--------
+Mean Average Precision of rank/regParam/alpha 60/2.5/11 = 0.0219117252863756
+
+The best model has meanAP = 0.0219522311297181 : rank = 60, regParam = 2.5, alpha = 9
+Time taken:  3241.4935517311096
+[lj1194@login-1-1 final-project-rin733]$
