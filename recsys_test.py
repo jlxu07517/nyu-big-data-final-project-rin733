@@ -2,46 +2,34 @@
 # -*- coding: utf-8 -*-
 '''Part 2: recsys testing
 Usage:
-    $ spark-submit recsys_test.py hdfs:/path/to/load/model.parquet hdfs:/user/lj1194/test_sub.parquet
+    $ spark-submit recsys_test.py hdfs:/path/to/load/best_model.parquet hdfs:/user/lj1194/test_sub.parquet
 '''
-
 
 # We need sys to get the command line arguments
 import sys
 
 # And pyspark.sql to get the spark session
 from pyspark.sql import SparkSession
-# TODO: you may need to add imports here
-# from pyspark.ml import PipelineModel
 from pyspark.ml.recommendation import ALSModel
 from pyspark.mllib.evaluation import RankingMetrics
 
 
 def main(spark, model_file, data_file):
-    '''Main routine for supervised evaluation
+    '''
     Parameters
     ----------
     spark : SparkSession object
-    model_file : string, path to store the serialized model file
-    data_file : string, path to the parquet file to load
+    model_file : string, path to the best model file
+    data_file : string, path to the test parquet file to load
     '''
 
-    ###
-    # TODO: YOUR CODE GOES HERE
-    ###
-
     # Loads test data
-<<<<<<< HEAD
-    data = spark.read.parquet(data_file).repartition(5000, ['user_num_id'])
-=======
     data = spark.read.parquet(data_file).repartition(5000, "user_num_id")
->>>>>>> 8801c208816877aad2bccd590af2fa7d2c8a76b9
     data.createOrReplaceTempView('data')
 
     # Loads trained ALS model
     model = ALSModel.load(model_file)
 
-    # .collect()?
     users = data.select('user_num_id').distinct()
     truth = spark.sql('SELECT user_num_id AS user_id, collect_list(track_num_id) AS label FROM data GROUP BY user_num_id')
 
@@ -58,18 +46,16 @@ def main(spark, model_file, data_file):
     print('Mean Average Precision on test set = {}'.format(meanAP))
 
 
-
-
 # Only enter this block if we're in main
 if __name__ == "__main__":
 
     # Create the spark session object
     spark = SparkSession.builder.appName('recsys_test').getOrCreate()
 
-    # And the location to store the trained model
+    # And the location to our trained model
     model_file = sys.argv[1]
 
-    # Get the filename from the command line
+    # Get the test filename from the command line
     data_file = sys.argv[2]
 
     # Call our main routine
