@@ -11,19 +11,12 @@ Usage:
 
 # We need sys to get the command line arguments
 import sys
-import itertools
 
 # And pyspark.sql to get the spark session
 from pyspark.sql import SparkSession
 from pyspark.ml import Pipeline
 from pyspark.ml.feature import StringIndexer
 from pyspark.sql.types import IntegerType
-# TODO: you may need to add imports here
-# from pyspark.ml import Pipeline
-# from pyspark.ml.feature import StringIndexer
-from pyspark.ml.recommendation import ALS
-from pyspark.mllib.evaluation import RankingMetrics
-
 
 def main(spark, train_file, val_file, test_file):
     '''Main routine for supervised training
