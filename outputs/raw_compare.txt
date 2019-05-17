@@ -1,0 +1,11 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_raw_best.txt
+rank_list =  [90]
+regParam_list =  [4]
+alpha_list =  [30]
+
+--------Start Computing rank = 90, regParam = 4, alpha = 30... ...--------
+MAP = 0.04880817155049189
+
+The best model has meanAP = 0.04880817155049189 : rank = 90, regParam = 4, alpha = 30
+Avg time taken:  2391.778701066971
+[lj1194@login-1-1 final-project-rin733]$
