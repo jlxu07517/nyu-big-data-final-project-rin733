@@ -1,0 +1,40 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_reg1.txt
+Try higher regParam ...
+
+--------Start Computing rank = 40, regParam = 0.3, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.3/25 = 0.03575025873976089
+
+
+--------Start Computing rank = 40, regParam = 0.5, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.5/25 = 0.03610462609090589
+
+
+--------Start Computing rank = 40, regParam = 1, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 40/1/25 = 0.0374327384401837
+
+
+--------Start Computing rank = 60, regParam = 0.3, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 60/0.3/25 = 0.03878415196896589
+
+
+--------Start Computing rank = 60, regParam = 0.5, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 60/0.5/25 = 0.0391776551267123
+
+
+--------Start Computing rank = 60, regParam = 1, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 60/1/25 = 0.04024597723721892
+
+
+--------Start Computing rank = 80, regParam = 0.3, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 80/0.3/25 = 0.04202735834887171
+
+
+--------Start Computing rank = 80, regParam = 0.5, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 80/0.5/25 = 0.042339815186795665
+
+
+--------Start Computing rank = 80, regParam = 1, alpha = 25... ...--------
+Mean Average Precision of rank/regParam/alpha 80/1/25 = 0.04367899157341142
+
+The best model has meanAP = 0.04367899157341142 : rank = 80, regParam = 1, alpha = 25
+[lj1194@login-1-1 final-project-rin733]$
