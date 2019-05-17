@@ -1,0 +1,29 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_raw_random2.txt
+
+--------Start Computing rank = 24, regParam = 0.6014254126112601, alpha = 1.723802724473896... ...--------
+Mean Average Precision of rank/regParam/alpha 24/0.6014254126112601/1.723802724473896 = 0.026626265655256522
+
+
+--------Start Computing rank = 38, regParam = 1.2176528961655197, alpha = 1.0009649536261966... ...--------
+Mean Average Precision of rank/regParam/alpha 38/1.2176528961655197/1.0009649536261966 = 0.024375152487622762
+
+
+--------Start Computing rank = 28, regParam = 1.093021855298376, alpha = 0.5298904189758482... ...--------
+Mean Average Precision of rank/regParam/alpha 28/1.093021855298376/0.5298904189758482 = 0.019725760606262046
+
+
+--------Start Computing rank = 37, regParam = 0.31135236749711764, alpha = 0.7068121309657716... ...--------
+Mean Average Precision of rank/regParam/alpha 37/0.31135236749711764/0.7068121309657716 = 0.024239278650862103
+
+
+--------Start Computing rank = 27, regParam = 1.170303406098281, alpha = 0.1341783921380355... ...--------
+Mean Average Precision of rank/regParam/alpha 27/1.170303406098281/0.1341783921380355 = 0.0033608364952050483
+
+
+--------Start Computing rank = 62, regParam = 1.1296521124937746, alpha = 0.37298169842674334... ...--------
+Mean Average Precision of rank/regParam/alpha 62/1.1296521124937746/0.37298169842674334 = 0.01770442027986227
+
+
+--------Start Computing rank = 73, regParam = 0.7929022883932717, alpha = 0.13952641984619563... ...--------
+Mean Average Precision of rank/regParam/alpha 73/0.7929022883932717/0.13952641984619563 = 0.01448661846621939
+[lj1194@login-1-1 final-project-rin733]$
