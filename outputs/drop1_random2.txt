@@ -1,0 +1,44 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_drop1_random2.txt
+
+--------Start Computing rank = 28, regParam = 3.5912278466695717, alpha = 12... ...--------
+MAP = 0.026900121993536995
+
+
+--------Start Computing rank = 62, regParam = 2.2082416608210114, alpha = 3... ...--------
+MAP = 0.02516828559370639
+
+
+--------Start Computing rank = 91, regParam = 2.4443566811188266, alpha = 25... ...--------
+MAP = 0.03062266241195284
+
+
+--------Start Computing rank = 99, regParam = 4.810401727765173, alpha = 9... ...--------
+MAP = 0.03158089245838703
+
+
+--------Start Computing rank = 97, regParam = 3.327530013435738, alpha = 5... ...--------
+MAP = 0.028823855797937115
+
+
+--------Start Computing rank = 85, regParam = 2.8193400120464704, alpha = 28... ...--------
+MAP = 0.03026125540056042
+
+
+--------Start Computing rank = 27, regParam = 3.1887095831048615, alpha = 14... ...--------
+MAP = 0.026201207787280197
+
+
+--------Start Computing rank = 30, regParam = 4.021106954271331, alpha = 8... ...--------
+MAP = 0.025520966107518007
+
+
+--------Start Computing rank = 89, regParam = 3.5887368402858755, alpha = 34... ...--------
+MAP = 0.03105056363158721
+
+
+--------Start Computing rank = 97, regParam = 2.8498993633744227, alpha = 8... ...--------
+MAP = 0.030686089435546068
+
+The best model has meanAP = 0.03158089245838703 : rank = 99, regParam = 4.810401727765173, alpha = 9
+Time taken per set of params:  1606.9139338970185
+[lj1194@login-1-1 final-project-rin733]$
