@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-'''Part 2: recsys training
+''' recsys fit indexer
 
 Usage:
 
-    $ nohup spark-submit recsys_train_6.py ./train_downsample.parquet hdfs:/user/bm106/pub/project/cf_validation.parquet ./recsys_6
+    $ spark-submit fit_indexer_int.py ./train_downsample.parquet hdfs:/user/bm106/pub/project/cf_validation.parquet hdfs:/user/bm106/pub/project/cf_test.parquet
 
 '''
 
@@ -25,24 +25,20 @@ from pyspark.ml.recommendation import ALS
 from pyspark.mllib.evaluation import RankingMetrics
 
 
-def main(spark, train_file, val_file, test_file, model_file):
+def main(spark, train_file, val_file, test_file):
     '''Main routine for supervised training
 
     Parameters
     ----------
     spark : SparkSession object
 
-    data_file : string, path to the parquet file to load
+    train_file : string, path to the train parquet file to load
+    val_file : string, path to the val parquet file to load
+    test_file : string, path to the test parquet file to load
 
-    model_file : string, path to store the serialized model file
     '''
 
-    ###
-    # TODO: YOUR CODE GOES HERE
-    ###
-
     train = spark.read.parquet(train_file)
-    # train.createOrReplaceTempView('train')
     val = spark.read.parquet(val_file)
     test = spark.read.parquet(test_file)
 
@@ -59,22 +55,22 @@ def main(spark, train_file, val_file, test_file, model_file):
 
     val = val.withColumn("user_num_id", val["user_num_id"].cast(IntegerType()))
     val = val.withColumn("track_num_id", val["track_num_id"].cast(IntegerType()))
-    val.write.parquet("val_sample.parquet")
-    # val = val.withColumn("count", val["count"].cast(IntegerType()))
+    val.write.parquet("val_sub.parquet")
+
     test = test.withColumn("user_num_id", test["user_num_id"].cast(IntegerType()))
     test = test.withColumn("track_num_id", test["track_num_id"].cast(IntegerType()))
-    test.write.parquet("test_sample.parquet")
+    test.write.parquet("test_sub.parquet")
 
     train = train.withColumn("user_num_id", train["user_num_id"].cast(IntegerType()))
     train = train.withColumn("track_num_id", train["track_num_id"].cast(IntegerType()))
-    train.repartition(1000, ["user_num_id", "count"]).write.parquet('train_sample.parquet')
+    train.repartition(1000, ["user_num_id", "count"]).write.parquet('train_sub.parquet')
 
 
 # Only enter this block if we're in main
 if __name__ == "__main__":
 
     # Create the spark session object
-    spark = SparkSession.builder.appName('recsys_train').getOrCreate()
+    spark = SparkSession.builder.appName('recsys_fit_indexer').getOrCreate()
 
     sc = pyspark.SparkContext(conf=conf)
 
@@ -82,12 +78,10 @@ if __name__ == "__main__":
     # Get the train set filename from the command line
     train_file = sys.argv[1]
 
-    # Get the val set filename from the command line
+    # Get the val and test set filename from the command line
     val_file = sys.argv[2]
     test_file = sys.argv[3]
 
-    # And the location to store the trained model
-    model_file = sys.argv[4]
 
     # Call our main routine
-    main(spark, train_file, val_file, test_file, model_file)
+    main(spark, train_file, val_file, test_file)
