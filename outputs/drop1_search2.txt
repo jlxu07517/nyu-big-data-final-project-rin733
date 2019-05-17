@@ -1,0 +1,23 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_drop1_search2.txt
+rank_list =  [50]
+regParam_list =  [0.01, 0.1, 0.5, 1]
+alpha_list =  [3]
+
+--------Start Computing rank = 50, regParam = 0.01, alpha = 3... ...--------
+MAP = 0.023145454827480094
+
+
+--------Start Computing rank = 50, regParam = 0.1, alpha = 3... ...--------
+MAP = 0.023164526381670606
+
+
+--------Start Computing rank = 50, regParam = 0.5, alpha = 3... ...--------
+MAP = 0.023878276317800654
+
+
+--------Start Computing rank = 50, regParam = 1, alpha = 3... ...--------
+MAP = 0.02427432201238771
+
+The best model has meanAP = 0.02427432201238771 : rank = 50, regParam = 1, alpha = 3
+Avg time taken:  869.1868493556976
+[lj1194@login-1-1 final-project-rin733]$

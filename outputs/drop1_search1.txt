@@ -1,0 +1,139 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_drop1_search1.txt
+Start time:  1557710229.591345
+
+--------Start Computing rank = 10, regParam = 0.1, alpha = 0.1... ...--------
+Mean Average Precision of rank/regParam/alpha 10/0.1/0.1 = 0.015172587525294831
+
+Time taken:  622.1665835380554
+
+--------Start Computing rank = 10, regParam = 0.1, alpha = 1... ...--------
+Mean Average Precision of rank/regParam/alpha 10/0.1/1 = 0.01735521880669976
+
+Time taken:  1176.6952352523804
+
+--------Start Computing rank = 10, regParam = 0.1, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 10/0.1/3 = 0.01848035687976088
+
+Time taken:  1868.8451313972473
+
+--------Start Computing rank = 10, regParam = 0.5, alpha = 0.1... ...--------
+Mean Average Precision of rank/regParam/alpha 10/0.5/0.1 = 0.011835224258568394
+
+Time taken:  2544.126075744629
+
+--------Start Computing rank = 10, regParam = 0.5, alpha = 1... ...--------
+Mean Average Precision of rank/regParam/alpha 10/0.5/1 = 0.017063039363559566
+
+Time taken:  3227.642919778824
+
+--------Start Computing rank = 10, regParam = 0.5, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 10/0.5/3 = 0.0187765682635792
+
+Time taken:  3938.6682102680206
+
+--------Start Computing rank = 10, regParam = 1, alpha = 0.1... ...--------
+Mean Average Precision of rank/regParam/alpha 10/1/0.1 = 0.01082195656505489
+
+Time taken:  4633.344384908676
+
+--------Start Computing rank = 10, regParam = 1, alpha = 1... ...--------
+Mean Average Precision of rank/regParam/alpha 10/1/1 = 0.015626302842453248
+
+Time taken:  5292.44198513031
+
+--------Start Computing rank = 10, regParam = 1, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 10/1/3 = 0.018640399445417396
+
+Time taken:  5924.8551642894745
+
+--------Start Computing rank = 20, regParam = 0.1, alpha = 0.1... ...--------
+Mean Average Precision of rank/regParam/alpha 20/0.1/0.1 = 0.014482546448862198
+
+Time taken:  6694.601423501968
+
+--------Start Computing rank = 20, regParam = 0.1, alpha = 1... ...--------
+Mean Average Precision of rank/regParam/alpha 20/0.1/1 = 0.018461185572226767
+
+Time taken:  7541.559347867966
+
+--------Start Computing rank = 20, regParam = 0.1, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 20/0.1/3 = 0.02073311761530376
+
+Time taken:  8369.084442138672
+
+--------Start Computing rank = 20, regParam = 0.5, alpha = 0.1... ...--------
+Mean Average Precision of rank/regParam/alpha 20/0.5/0.1 = 0.01574029252060038
+
+Time taken:  9160.538015842438
+
+--------Start Computing rank = 20, regParam = 0.5, alpha = 1... ...--------
+Mean Average Precision of rank/regParam/alpha 20/0.5/1 = 0.018525719655816546
+
+Time taken:  10114.216263055801
+
+--------Start Computing rank = 20, regParam = 0.5, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 20/0.5/3 = 0.02140317842777949
+
+Time taken:  11002.907569885254
+
+--------Start Computing rank = 20, regParam = 1, alpha = 0.1... ...--------
+Mean Average Precision of rank/regParam/alpha 20/1/0.1 = 0.010689700388221509
+
+Time taken:  11885.32391667366
+
+--------Start Computing rank = 20, regParam = 1, alpha = 1... ...--------
+Mean Average Precision of rank/regParam/alpha 20/1/1 = 0.017903563963548315
+
+Time taken:  12791.358379125595
+
+--------Start Computing rank = 20, regParam = 1, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 20/1/3 = 0.021452209123838203
+
+Time taken:  13674.424059391022
+
+--------Start Computing rank = 40, regParam = 0.1, alpha = 0.1... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.1/0.1 = 0.014253814779390472
+
+Time taken:  14681.335057020187
+
+--------Start Computing rank = 40, regParam = 0.1, alpha = 1... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.1/1 = 0.01988759256477246
+
+Time taken:  15744.180163383484
+
+--------Start Computing rank = 40, regParam = 0.1, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.1/3 = 0.022638952800576016
+
+Time taken:  16846.163301706314
+
+--------Start Computing rank = 40, regParam = 0.5, alpha = 0.1... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.5/0.1 = 0.01550343757984317
+
+Time taken:  17828.853815317154
+
+--------Start Computing rank = 40, regParam = 0.5, alpha = 1... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.5/1 = 0.019446117911476813
+
+Time taken:  18834.601976633072
+
+--------Start Computing rank = 40, regParam = 0.5, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 40/0.5/3 = 0.0232464512445118
+
+Time taken:  20083.18521285057
+
+--------Start Computing rank = 40, regParam = 1, alpha = 0.1... ...--------
+Mean Average Precision of rank/regParam/alpha 40/1/0.1 = 0.009869378358323893
+
+Time taken:  21041.48309469223
+
+--------Start Computing rank = 40, regParam = 1, alpha = 1... ...--------
+Mean Average Precision of rank/regParam/alpha 40/1/1 = 0.018631782757541168
+
+Time taken:  22253.414276599884
+
+--------Start Computing rank = 40, regParam = 1, alpha = 3... ...--------
+Mean Average Precision of rank/regParam/alpha 40/1/3 = 0.023674160985735063
+
+Time taken:  23210.612233400345
+The best model has meanAP = 0.023674160985735063 : rank = 40, regParam = 1, alpha = 3
+[lj1194@login-1-1 final-project-rin733]$
