@@ -8,7 +8,6 @@ Usage:
 
 '''
 
-
 # We need sys to get the command line arguments
 import sys
 
@@ -56,7 +55,7 @@ def main(spark, train_file, val_file, test_file):
 
     train = train.withColumn("user_num_id", train["user_num_id"].cast(IntegerType()))
     train = train.withColumn("track_num_id", train["track_num_id"].cast(IntegerType()))
-    train.repartition(1000, ["user_num_id", "count"]).write.parquet('train_sub.parquet')
+    train.repartition(1000, "user_num_id").write.parquet('train_sub.parquet')
 
 
 # Only enter this block if we're in main
@@ -65,16 +64,12 @@ if __name__ == "__main__":
     # Create the spark session object
     spark = SparkSession.builder.appName('recsys_fit_indexer').getOrCreate()
 
-    sc = pyspark.SparkContext(conf=conf)
-
-
     # Get the train set filename from the command line
     train_file = sys.argv[1]
 
     # Get the val and test set filename from the command line
     val_file = sys.argv[2]
     test_file = sys.argv[3]
-
 
     # Call our main routine
     main(spark, train_file, val_file, test_file)
