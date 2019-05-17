@@ -1,0 +1,9 @@
+[lj1194@login-1-1 final-project-rin733]$ cat o_drop1_test1.txt
+Start time:  1557699702.2202363
+
+--------Start Computing rank = 90, regParam = 4, alpha = 30... ...--------
+Mean Average Precision of rank/regParam/alpha 90/4/30 = 0.03127404988117205
+
+Time taken:  2410.9029636383057
+The best model has meanAP = 0.03127404988117205 : rank = 90, regParam = 4, alpha = 30
+[lj1194@login-1-1 final-project-rin733]$
